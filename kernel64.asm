@@ -58,6 +58,8 @@ kernel_start:
     mov rsi, boot_ready_msg
     call print_string
 
+	call kernel_main
+	jmp $
 
 main_loop:
     mov rsi, prompt
