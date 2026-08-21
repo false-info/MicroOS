@@ -45,11 +45,12 @@ void c_gfx_draw_cell(unsigned char character, unsinged long cell index) {
     unsinged char font_byte = font_char[y];
     for (int x; x < 8; x++) {
       if (font_byte & (0x80 >> x)) {
-        pixel_ptr[x] = 0x00FFFFF;
+        pixel_ptr[x] = 0x00FFFFFF;
       } else {
-        pixel_ptr[x] =
+        pixel_ptr[x] = 0x00000040;
       }
       }
+    pixel_ptr += (FB_INFO->pixel / 4);
     }
   }
 }
