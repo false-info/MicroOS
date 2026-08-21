@@ -1,4 +1,5 @@
 bits 64
+external kernal_main
 default abs
 
 ; -------------------------
